@@ -10,29 +10,26 @@
 </head>
 <body>
 	
-	<button id="stylesChanger">Change the text!</button>
-	
-	<div id="firstDiv">This is some text</div>
-	
+	<p>What is the weather?</p>
+	<input id="weather" />
+	<button id="myButton">Submit</button>
+
+
 	<script type="text/javascript">
-		
-		var myArray=new Array();
 
-		myArray[0]="pizza";
-		myArray[1]="chocolate";
+		document.getElementById("myButton").onclick=function() {
 
-		myOtherArray=["rain","sunshine"];
+			if (document.getElementById("weather").value=="rain") {
 
-		myOtherArray.push("snow");
+				alert ("it's raining");
 
-		myOtherArray.splice(2, 0, "hail", "cloudy");
+			} else {
 
-		console.log(myOtherArray.length);
-		console.log(myArray);
-		document.getElementById("stylesChanger").onclick=function() {
-			document.getElementById("firstDiv").innerHTML=myArray[1];
+				alert("it's not raining!");
+
+			}
+
 		}
-
 	</script>
 </body>
 </html>
