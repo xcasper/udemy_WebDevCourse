@@ -10,25 +10,25 @@
 </head>
 <body>
 	
-	<p>What is the weather?</p>
-	<input id="weather" />
+	<p>How many fingers am I holding up?</p>
+	<input id="answer" />
 	<button id="myButton">Submit</button>
 
 
 	<script type="text/javascript">
 
 		document.getElementById("myButton").onclick=function() {
-
-			if (document.getElementById("weather").value=="rain") {
-
-				alert ("it's raining");
-
+			var x=Math.random();
+			
+			x *= 6;
+			
+			x=Math.floor(x);
+			
+			if( x == document.getElementById("answer").value) {
+				alert("That's correct!");
 			} else {
-
-				alert("it's not raining!");
-
+				alert("That's wrong! My number was " + x);
 			}
-
 		}
 	</script>
 </body>
