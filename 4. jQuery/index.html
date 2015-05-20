@@ -27,21 +27,13 @@
 </head>
 <body>
 	
-	<div id="circle"></div>
-	<div class="square"></div>
-	<script> 		
-		$(".square").click(function() {
-			$(this).fadeOut(1500);
-		});
-		
-		$("#circle").click(function(){
-			$(this).animate({
-				width:"300px",
-				height:"300px",
-				borderRadius:"150px",
-				marginLeft:"100px",
-				marginTop:"100px"
-				},800);
+	<h1>Asyncronous Javascript and XML</h1>
+	
+	<script> 				
+		$.ajax({
+			url:"test.html"
+		}).done(function(data){
+			$("h1").append(data);
 		});
 	</script>
 </body>
