@@ -6,34 +6,67 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
 	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-		
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	
 	<style>
-		#circle {
+		#square {
 			width: 200px;
 			height: 200px;
-			background-color:green;
-			border-radius:100px;
+			background-color: yellow;
+			font-family: helvetica;
 		}
 		
-		.square {
-			width: 300px;
-			height: 300px;
-			background-color: red;
-			margin-top: 10px;
+		#target {
+			width: 400px;
+			height: 400px;
+			background-color: blue;
+			font-family: helvetica;
+			color: white;
 		}
 		
 	</style>	
 </head>
 <body>
+	<div id="accordion">
+		<h3>Title</h3>
+		<div>
+			<p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
+			This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. 
+			This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. 
+			This is some text. This is some text. This is some text.</p> 
+		</div>
+		
+		<h3>Title</h3>
+		<div>
+			<p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
+			This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. 
+			This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. 
+			This is some text. This is some text. This is some text.</p> 
+		</div>
+		
+		<h3>Title</h3>
+		<div>
+			<p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
+			This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. 
+			This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. 
+			This is some text. This is some text. This is some text.</p> 
+		</div>
+	</div>
 	
-	<script> 				
-		var regex = /e/g;
-		
-		var string = "Regex is Great!";
-		
-		var result = string.match(regex);
-		alert(result);
+	<br /><br />
+	<h3>You can sort the list below by dragging and dropping</h3>
+	<ul>
+		<li>Pizza</li>
+		<li>Cheese</li>
+		<li>Tomatoes</li>
+		<li>Chocolate</li>
+	</ul>
+	<script>
+		$("#accordion").accordion();
+		$("ul").sortable();
 	</script>
 </body>
 </html>
